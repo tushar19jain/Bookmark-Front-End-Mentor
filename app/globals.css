@@ -2,32 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@media screen and (max-width : 448px){
+    .features p{
+        padding: 12px;
+        margin-left: 0px;
+        font-size: 13px;
+        width: 360px;
+    }
+    .cards{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .chromeCard{
+        margin-top: 0px;
+    }
+    .fireFoxCard{
+        margin-top: 30px;
+    }
+    .operaCard{
+        margin-top: 30px;
+    }
+    .Extension p{
+        margin-left: 0px;
+        width: 340px;
+        font-size: 14px; 
+    }
+    .Extension h1{
+        margin-top: -100px;
+    }
+    .FAQ .faqPara{
+        font-size: 14px;
+        width: 350px;
+        padding: 2px;
+    } 
+    .FAQ p {
+        width: 300px;
+        font-size: 13px;
+        margin-left: 0px;
+    }
+    .infoBtn {
+        margin-left: 20px;
+    }
+    footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer_main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .links{
+        flex-direction: column;
+    }
 }

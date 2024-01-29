@@ -1,0 +1,37 @@
+.firefoxBtn{
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+@media screen and (max-width : 448px) {
+
+    .main{
+        flex-direction: column-reverse;
+    }
+    .blub-blob{
+        left: 100px;
+        top: 230px;
+        height: 180px;
+        width:260px;
+    }
+    .leftSideHeading{
+        text-align: center;
+        padding-top: 70px;
+    }
+    .leftSideHeading h1{
+        font-size: 35px;
+        width: 350px;
+        line-height: 50px;
+    }
+    .leftSideHeading p{
+        font-size: 14px;
+        width:350px;
+        padding: 8px;
+    }
+    .button-group{
+        font-size: 13px;
+        justify-content: center;
+        align-items: center;
+        gap: 25px; 
+    }
+    
+    
+}

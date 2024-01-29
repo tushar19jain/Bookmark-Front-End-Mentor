@@ -1,0 +1,39 @@
+.slidableBar{
+    transition: 0.2s ease-in-out;
+}
+@media screen and (max-width : 448px){
+    
+    .featureSelection ul{
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+    .slidableBar{
+        transition: none;
+        display: none;
+    }
+
+    .featuresInformation{
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    .featuresText{
+        margin-top: 90px;
+        font-size: 15px;
+        width:340px;
+        align-items: center;
+    }
+    .featuresText p{
+        text-align: center;
+        width: 330px;
+    }
+    .blueBlob{
+        width: 300px;
+        height: 200px;
+        top: 1500px;
+    }
+   
+    .heroImg{
+        height: 215px;
+    }
+}

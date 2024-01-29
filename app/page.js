@@ -1,113 +1,68 @@
-import Image from "next/image";
+import MainSection from "@/Components/MainSection";
+import Navbar from "@/Components/Navbar";
+import './globals.css'
+import FeaturesTab from "@/Components/FeaturesTab";
+import ExtensionCard from "@/Components/ExtensionCard";
+import FAQdropsdown from "@/Components/FAQdropdown";
+import ContactForm from "@/Components/ContactForm";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <Navbar />
+      <MainSection />
+      <div className='features mt-[55px] text-center'>
+          <h1 className='font-semibold text-3xl py-[30px]'>Features</h1>
+          <p className='text-gray-400 w-[480px] ml-[510px]'>Our aim is to make it quick and and easy for you to access you favourite website.Your bookmark sync between your devices so you can access them on the go. </p>
+      </div>
+      <FeaturesTab />
+      <div className='Extension mt-[150px]'>
+          <h1 className='font-semibold text-3xl py-[30px] text-center'>Download the extension</h1>
+          <p className='text-gray-400 w-[480px] ml-[510px] text-center'>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize. </p>        
+      </div>
+      <div className=" cards flex justify-center gap-[50px]">
+        <div className='chromeCard mt-[60px]'>
+          <ExtensionCard  browserName = "Chrome" src = "logo-chrome.svg" version = "62"/>
+        </div>
+        <div className='fireFoxCard mt-[100px]'>
+          <ExtensionCard browserName = "Firefox" src = "logo-firefox.svg" version ="55" />
+        </div>
+        <div className='operaCard mt-[140px]'>
+          <ExtensionCard browserName = "Opera" src = "logo-opera.svg" version = "46" />
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="FAQ mt-[90px]">
+            <h1 className='font-semibold text-3xl py-[30px] text-center'>Frequently Asked Question</h1>
+            <p className='faqPara text-gray-400 w-[480px] ml-[510px] text-center'>Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us. </p>
+            <div className="flex flex-col justify-center mt-[60px]">
+            <FAQdropsdown  heading = " What is Bookmark?" desc ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis."/>
+            <FAQdropsdown  heading = "How can I request a new browser?" desc ="Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet."/>
+            <FAQdropsdown  heading = "Is there a mobile app?" desc ="Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum."/>
+            <FAQdropsdown  heading = "What about other Chromium Browsers" desc = "Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit"/>
+            </div>
+            <div className=" infoBtn ml-[720px] mt-[50px]">
+            <button className='  bg-[#5368DF] py-[12px] px-[12px] text-white font-semibold rounded-md'>More Info</button>
+            </div> 
+        </div>
+      <div className="contactForm  text-center py-[50px] mt-[100px] bg-[#5368DF]">
+        <p className='font-mono font-semibold text-md text-white'>35,000+ ALREADY JOINED</p>
+        <h1 className="text-3xl py-[25px]  text-white">Stay up-to-date with what we’re doing </h1>
+        <ContactForm />
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <footer className="bg-blue-900 py-[30px] flex items-center  justify-between px-[80px]">
+        <div className=" footer_main flex justify-around gap-[60px]">
+          <img className="invert" src="logo-bookmark.svg"></img>
+          <ul className="links flex text-sm items-center gap-[40px] text-white">
+            <li>FEATURES</li>
+            <li>CONTACT</li>
+            <li>PRICING</li>
+          </ul>
+        </div>
+        <div className="flex justify-between gap-[50px]">
+          <img src="icon-facebook.svg"></img>
+          <img src="icon-twitter.svg"></img>
+        </div>
+        </footer>        
       </div>
-    </main>
-  );
+  )
 }

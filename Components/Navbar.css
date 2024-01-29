@@ -1,0 +1,12 @@
+.sideNavOpen{
+    display: none;
+}
+@media screen and (max-width : 448px) {
+    .nav-links{
+        display: none;
+    }
+    .sideNavOpen{
+        display:block;
+
+    }
+}
